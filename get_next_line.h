@@ -6,7 +6,7 @@
 /*   By: dbustama <dbustama@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/09 12:12:17 by dbustama          #+#    #+#             */
-/*   Updated: 2026/10/09 18:49:00 by dbustama         ###   ########.fr       */
+/*   Updated: 2026/10/11 02:57:37 by dbustama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,14 +22,17 @@
 #  define BUFFER_SIZE 42
 # endif
 
+void	*clean_stash(char *stash, char *line);
+
+char	*memory_free(char *new, char **stash);
+char	*get_lines(char	**stash, size_t len_l);
+char	*read_buff(int fd, char *rest);
 char	*get_next_line(int fd);
-char	*get_str(int fd, char *str);
-char	*get_lines(char	*str);
-char	*ft_substr(char const *s, unsigned int start, size_t len);
-void	*get_stash(char *stash, char *str, char *line);
 char	*ft_strjoin(char *s1, char *s2);
-int		ft_strchr(const char *s, int c);
-size_t	ft_strlen(const char *s);
+char	*ft_strchr(char *s, int c);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
+size_t	ft_strlen(const char *s);
 
 #endif
