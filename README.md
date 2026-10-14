@@ -123,8 +123,6 @@ For the **bonus**, the single static variable is an array of pointers indexed by
 - **Memory safety.** Every buffer is freed after use, and the stash is freed as soon as it becomes empty or when an error/end of file occurs, avoiding leaks.
 - **Trade-off.** Joining the stash with each new buffer requires copying data, so lines that are much longer than `BUFFER_SIZE` cost more copies. This is accepted in exchange for a simple, robust and easy-to-verify implementation.
 
-> **Note:** adapt this section so that it exactly matches your implementation, and make sure you can explain every step during the evaluation.
-
 ## Resources
 
 ### References
@@ -137,8 +135,5 @@ For the **bonus**, the single static variable is an array of pointers indexed by
 
 ### Use of AI
 
-> Fill this section honestly with what applies to your project.
-
 - AI was used to draft the structure and wording of this `README.md`.
-- AI was **not** used to write the project's source code. *(Edit this line if it is not true in your case.)*
-- Tasks for which AI was used and the parts of the project concerned: `<list here, e.g. "README.md writing", "explaining a concept", "none in the source code">`.
+- No direct code solutions or automatic code generators were used to write library functions. Fundamental reasoning and peer discussions were prioritized to construct the library.
