@@ -85,7 +85,7 @@ int	main(void)
 }
 ```
 
-To read from standard input, simply use `fd = 0`.
+To read from standard input, simply use `fd = 0`
 
 ### Recommended tests
 
