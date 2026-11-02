@@ -6,7 +6,7 @@
 /*   By: dbustama <dbustama@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/09 12:11:48 by dbustama          #+#    #+#             */
-/*   Updated: 2026/10/11 04:00:24 by dbustama         ###   ########.fr       */
+/*   Updated: 2026/11/02 11:56:34 by dbustama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,10 +40,18 @@ char	*get_lines(char	**rest, size_t len_l)
 {
 	char	*line;
 	char	*new_rest;
+	size_t	rest_len;
 
+	rest_len = gnl_strlen(*rest);
 	line = ft_substr(*rest, 0, len_l);
 	if (!line)
 		return (memory_free(NULL, rest));
+	if (len_l >= rest_len)
+	{
+		free(*rest);
+		*rest = NULL;
+		return (line);
+	}
 	new_rest = ft_substr(*rest, len_l, ft_strlen(*rest) - len_l);
 	if (!new_rest)
 		return (memory_free(line, rest));
